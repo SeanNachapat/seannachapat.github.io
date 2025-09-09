@@ -6,8 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+                'night' : '#111111',
+                'raisinBlack' : '#202020',
+              },
       fontFamily: {
-                'JetBrain': ['JetBrains Mono', 'sans-serif'], // Replace with your font name
+                'JetBrain': ['JetBrains Mono', 'sans-serif'], 
               },
     },
   },

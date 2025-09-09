@@ -1,0 +1,27 @@
+import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Card from "./Card";
+
+const Project = () => {
+  return (
+    <div className="bg-night text-white font-JetBrain">
+      <Navbar />
+      <div className="flex flex-col items-center min-h-screen">
+        <h2 className="text-center text-2xl font-bold p-5">Projects</h2>
+        <div className="flex flex-col p-6 gap-6 md:grid md:grid-cols-3 items-center">
+          <Card
+            title="N-Pochna | Diet Assistant"
+            description="This project is made for educational purposes as a senior project at Kasetsart University Laboratory School Multilingual Program. N'Pochna is a LINE Bot integrated with Edamam API to assist in managing diets and workouts. Made by Nachapat Iamphuang."
+            imageUrl="\src\assets\N-Pochna.png"
+            pageLink="https://github.com/SeanNachapat/N-Pochna"
+            tags={["Javascript", "Node.js", "LINE", "RapidAPI", "Ngrok"]}
+          />
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Project;

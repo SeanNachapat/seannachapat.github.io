@@ -1,40 +1,92 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div className="bg-white font-JetBrain flex flex-col min-h-screen justify-center items-center">
+    <div className="bg-night text-white font-JetBrain">
       <Navbar />
-      <h1 className="text-[2em] font-medium text-black mb-4">
-        Hey there! I'm Sean 👋
-      </h1>
-      <p className="text-[1em] mb-2">💻 Studying Computer Science at KMITL</p>
-      <ul className="hidden md:flex gap-10 underline mb-8 ">
-        <a
-          className="hover:text-blue-800 cursor-pointer"
-          href="https://github.com/SeanNachapat"
-          target="_blank"
-        >
-          Github
-        </a>
-        <a
-          className="hover:text-blue-800 cursor-pointer"
-          href="https://www.instagram.com/seanst._/"
-          target="_blank"
-        >
-          Instagram
-        </a>
-        <a
-          className="hover:text-blue-800 cursor-pointer"
-          href="https://www.youtube.com/@Seanst"
-          target="_blank"
-        >
-          Youtube
-        </a>
-        {/* <a className="hover:text-blue-800 cursor-pointer" href="/Card">
-          Card
-        </a> */}
-      </ul>
+      <div className=" flex flex-col max-w-[600px] min-h-screen mx-auto p-7">
+        <div className="flex flex-col mx-auto items-center">
+          <img
+            className="size-[7rem] rounded-full  m-5 outline-white outline outline-offset-1"
+            src="https://avatars.githubusercontent.com/u/61649121?v=4"
+          ></img>
+          <p className="text-xl font-bold">Nachapat Iamphuang</p>
+          <p className="text-base mb-2 text-gray-400">Developer / Filmaker</p>
+        </div>
+        <div className="mt-7">
+          <h2 className="font-bold text-xl mb-3">About</h2>
+          <p className="text-base font-thin tracking-wide">
+            Hey! I'm <span className="font-bold text-justify">Sean</span>, a
+            passionate developer, and a machine learning enthusiast. Currently,
+            a 1st year Computer Science student, Teaching Assistance and
+            Lecturer at{" "}
+            <a
+              className="font-bold hover:font-extrabold hover:underline"
+              href="https://kmitl.ac.th/"
+            >
+              KMITL
+            </a>
+            .
+          </p>
+          <div className="flex justify-end">
+            <a
+              className="group hover:underline hover:font-extrabold"
+              href="/Resume"
+            >
+              <span>View Resume</span>
+              <span className="material-symbols-outlined text-lg px-2 translate-y-1 group-hover:translate-x-2 transition-all">
+                arrow_forward
+              </span>
+            </a>
+          </div>
+        </div>
+        <div className="mt-7">
+          <h2 className="font-bold text-xl mb-3">Experiences</h2>
+          <div className="bg-raisinBlack flex flex-col gap-1 bg-theme-secondary p-4 my-5 rounded-2xl hover:scale-105 transition-transform">
+            <h3 className="font-bold text-base">
+              Video Editor and Content Creator
+            </h3>
+            <div className="flex font-light justify-between text-sm text-gray-400">
+              <a className="underline" href="">
+                Micrubik
+              </a>
+              <p className="justify-end">2025 - present</p>
+            </div>
+            <ul className="text-sm text-gray-400 list-disc pl-4 text-justify">
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur ut nisl diam. Sed iaculis egestas velit. Nulla in dui
+                nec dui varius vulputate sed ut nunc. Curabitur iaculis nulla
+                libero, at lacinia lectus malesuada ut.
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-raisinBlack flex flex-col gap-1 bg-theme-secondary p-4 my-5 rounded-2xl hover:scale-105 transition-transform">
+            <h3 className="font-bold text-base">
+              Video Editor and Content Creator
+            </h3>
+            <div className="flex font-light justify-between text-sm text-gray-400">
+              <a className="underline" href="">
+                Micrubik
+              </a>
+              <p className="justify-end">2025 - present</p>
+            </div>
+            <ul className="text-sm text-gray-400 list-disc pl-4 text-justify">
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur ut nisl diam. Sed iaculis egestas velit. Nulla in dui
+                nec dui varius vulputate sed ut nunc. Curabitur iaculis nulla
+                libero, at lacinia lectus malesuada ut.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
