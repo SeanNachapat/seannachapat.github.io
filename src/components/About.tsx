@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Home = () => {
+const About = () => {
   return (
     <div className="bg-night text-white font-JetBrain">
       <Navbar />
@@ -17,14 +17,16 @@ const Home = () => {
         </div>
         <div className="mt-7">
           <h2 className="font-bold text-xl mb-3">About</h2>
-          <p className="text-base font-thin tracking-wide">
-            Hey! I'm <span className="font-bold text-justify">Sean</span>, a
+          <p className="text-base text-gray-400 font-thin tracking-wide">
+            Hey! I'm{" "}
+            <span className="font-bold text-justify text-white">Sean</span>, a
             passionate developer, and a machine learning enthusiast. Currently,
             a 1st year Computer Science student, Teaching Assistance and
             Lecturer at{" "}
             <a
-              className="font-bold hover:font-extrabold hover:underline"
+              className="font-bold text-white hover:font-extrabold hover:underline"
               href="https://kmitl.ac.th/"
+              target="_blank"
             >
               KMITL
             </a>
@@ -83,6 +85,43 @@ const Home = () => {
               </li>
             </ul>
           </div>
+
+          <div className="mt-7">
+            <h2 className="font-bold text-xl mb-3">Skills</h2>
+            <div className="flex flex-col m-2">
+              <div className="flex flex-wrap justify-start gap-9 text-xs pb-4 px-3">
+                <div className=" flex flex-col items-center w-[72px]">
+                  <img
+                    width={40}
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/640px-Typescript.svg.png"
+                  ></img>
+                  <p className="pt-2">Typescript</p>
+                </div>
+                <div className=" flex flex-col items-center w-[72px]">
+                  <img
+                    width={40}
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
+                  ></img>
+                  <p className="pt-2">Javascript</p>
+                </div>
+                <div className=" flex flex-col items-center w-[72px]">
+                  <img
+                    width={40}
+                    src="https://img.icons8.com/color/512/java-coffee-cup-logo.png"
+                  ></img>
+                  <p className="pt-2">Java</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-auto max-h-16 overflow-hidden justify-end ">
+                <li className="flex bg-raisinBlack p-1 rounded-lg">
+                  <span className="text-white text-sm font-extrabold p-1">
+                    Languages
+                  </span>
+                </li>
+              </div>
+            </div>
+            <hr className="solid my-5"></hr>
+          </div>
         </div>
       </div>
 
@@ -91,4 +130,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

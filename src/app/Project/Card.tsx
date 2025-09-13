@@ -19,13 +19,13 @@ const Card: React.FC<Card> = ({
 }) => {
   return (
     <a href={pageLink} target="_blank">
-      <div className="bg-raisinBlack flex flex-col gap-1 bg-theme-secondary my-1 rounded-2xl hover:scale-105 transition-transform min-w-[26rem] max-w-[27rem] h-[28rem] cursor-pointer">
+      <div className="bg-raisinBlack flex flex-col gap-1 my-1 rounded-2xl hover:scale-105 transition-transform min-w-[280px] max-w-[360px] sm:max-w-[380px] lg:max-w-[27rem] lg:min-h-[28rem] cursor-pointer">
         <img
           className="flex rounded-t-2xl h-52 object-cover"
           src={imageUrl}
           alt={altText}
         ></img>
-        <div className="px-4 py-2 flex flex-col h-full">
+        <div className="px-6 py-2 flex flex-col h-full">
           <div className="flex flex-row pb-1">
             <a className="font-bold text-lg hover:font-extrabold hover:underline">
               {title}
@@ -34,7 +34,7 @@ const Card: React.FC<Card> = ({
               open_in_new
             </span>
           </div>
-          <p className="text-sm text-gray-400 text-justify h-36">
+          <p className="text-sm text-gray-400 text-justify mb-3">
             {description}
           </p>
           <div className="flex flex-wrap gap-2 mt-auto max-h-16 overflow-hidden">

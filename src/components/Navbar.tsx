@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="bg-obsidian font-JetBrain">
+    <nav className="bg-night font-JetBrain sticky">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-          href="/Home"
+          href="/about"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="text-base self-center font-semibold whitespace-nowrap dark:text-white">
+          <span className="text-base self-center font-semibold whitespace-nowrap text-white">
             Seanst._
           </span>
         </a>
         <button
-          data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-white hover:bg-gray-700 focus:ring-gray-500"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((prev) => !prev)}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -29,18 +31,21 @@ const Navbar = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div
+          className={`${menuOpen ? "" : "hidden"} w-full md:block md:w-auto`}
+          id="navbar-default"
+        >
           <ul className="text-base flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             <li>
               <a
-                href="/Home"
+                href="/about"
                 className="block py-2 px-3 rounded-sm md:bg-transparent md:p-0 dark:text-white md:hover:font-extrabold hover:underline"
                 aria-current="page"
               >
@@ -49,18 +54,10 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/Project"
+                href="/project"
                 className="block py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:font-extrabold hover:underline"
               >
                 Project
-              </a>
-            </li>
-            <li>
-              <a
-                href="/About"
-                className="block py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:font-extrabold hover:underline"
-              >
-                Services
               </a>
             </li>
           </ul>

@@ -12,6 +12,7 @@ export default {
               },
       fontFamily: {
                 'JetBrain': ['JetBrains Mono', 'sans-serif'], 
+                'Chewy': ['Chewy', 'sans-serif'], 
               },
     },
   },
